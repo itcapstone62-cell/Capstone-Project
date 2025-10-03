@@ -22,9 +22,6 @@ header{
     flex-direction: row;
     gap: 40px;
     align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0; 
     font-weight: bold; 
     font-size: large; 
 } 
@@ -104,7 +101,8 @@ header{
     border-radius: 4px;
 }
 
-.popup-content button {
+.popup-content button,
+.popup-content button[type="submit"] {
     padding: 0.5em;
     border-radius: 4px;
     background: #8B4513;
@@ -115,7 +113,8 @@ header{
     transition: background 0.2s;
 }
 
-.popup-content button:hover {
+.popup-content button:hover,
+.popup-content button[type="submit"]:hover {
     background: #F5F5DC;
     color: #8B4513;
 }
@@ -164,7 +163,7 @@ html { scroll-behavior: smooth; }
 }
 
 .footer-tagline { margin-top: 6px; opacity: .9; }
-.footer-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-col ul { padding: 0; margin: 0; }
 .footer-col li { margin: 6px 0; }
 .footer-link:hover { text-decoration: underline; }
 .hours { margin-top: 8px; }
@@ -195,7 +194,6 @@ body {
 /* Push footer down; it stays after content and moves up when content is long */
 .site-footer { margin-top: auto; }
 
-/* ...existing code... */
 .home-main {
     margin: 2em auto;
     max-width: 1000px;
@@ -411,4 +409,67 @@ body {
     box-shadow: 0 0 8px #e2bd79;
     font-weight: bold;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.cart-main {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 2em;
+    background: #fff8ee;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(139,69,19,0.08);
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    margin-bottom: 1em;
+    padding: 1em 2em; /* Increase left/right padding for more space */
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(139,69,19,0.08);
+    gap: 2em; /* Add gap between name and button */
+}
+
+.cart-item-name {
+    font-weight: bold;
+    color: #8B4513;
+}
+
+.remove-btn {
+    background: #8B4513;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.4em 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.remove-btn:hover {
+    background: #F5F5DC;
+    color: #8B4513;
+}
+
+.btn {
+    background: #8B4513;
+    color: #fff;
+    border-radius: 6px;
+    padding: 0.6em 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1em;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+    background: #F5F5DC;
+    color: #8B4513;
+}
+
+#purchase-btn.btn {
+    cursor: pointer;
 }
